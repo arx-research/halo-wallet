@@ -1,11 +1,11 @@
-import React from 'react'
+import React from "react";
 
-import Logo from '../svg/Logo.tsx'
+import logo from "../assets/logo.png";
 
 export default function Header() {
   return (
     <header className="header">
-      <Logo className="header-logo" />
+      <img src={logo} alt="logo" width="52" height="52" />
     </header>
-  )
+  );
 }

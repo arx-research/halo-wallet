@@ -19,8 +19,6 @@ function App() {
   let [appState, setAppState] = useState({ name: "init" });
   let [haloAddress, setHaloAddress] = useState(null);
 
-  console.log("appState", appState);
-
   function updateHaloAddress(addr) {
     window.localStorage.setItem("haloAddress", addr);
     setHaloAddress(addr);
@@ -56,11 +54,8 @@ function App() {
   }, []);
 
   const onSessionRequest = useCallback((request) => {
-    console.log("session_request", request);
-
     setAppState((prevAppState) => {
       if (prevAppState.name === "session_request") {
-        console.log("session_request already pending");
         return prevAppState;
       } else {
         return { name: "session_request", request };
@@ -68,8 +63,7 @@ function App() {
     });
   }, []);
 
-  const onSessionDelete = useCallback((request) => {
-    console.log("session_delete", request);
+  const onSessionDelete = useCallback(() => {
     let hasAnyPairings = Object.keys(wcGetPairings()).length > 0;
 
     setAppState((prevAppState) => {
