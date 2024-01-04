@@ -63,9 +63,11 @@ function SessionRequest({ haloAddress, sessionRequest, onRequestProcessed }) {
 
           const { hash } =
             await connectedWallet.sendTransaction(sendTransaction);
+          alert(`Transaction sent: ${hash}`);
           return formatJsonRpcResult(id, hash);
         } catch (error) {
           console.error("sendTransaction error", error);
+          alert(error.message);
           return formatJsonRpcError(id, error.message);
         }
 
