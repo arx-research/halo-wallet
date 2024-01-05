@@ -45,7 +45,6 @@ export class HaloWallet extends Signer implements TypedDataSigner {
         name: "sign",
         keyNo: 1,
         digest: hexlify(digest).substring(2),
-        legacySignCommand: true,
       });
     } catch (e) {
       throw e;
