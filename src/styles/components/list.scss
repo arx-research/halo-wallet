@@ -4,6 +4,27 @@
 }
 
 .btn-pad {
+  width: 100%;
   margin-top: 5px;
   margin-bottom: 5px;
+  align-items: center;
+  background-color: #3de8a0;
+  border-radius: 4px;
+  color: #126c46;
+  display: flex;
+  font-size: 13px;
+  font-weight: 600;
+  height: 42px;
+  justify-content: center;
+  padding: 13px 32px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.page-content {
+  padding: 0 16px;
+  max-width: 500px; 
+  margin: 0 auto; 
+  width: 100%
 }

@@ -5,7 +5,13 @@ import logo from "../assets/logo.png";
 export default function Header() {
   return (
     <header className="header">
-      <img src={logo} alt="logo" width="52" height="52" />
+      <a
+        href="https://app.paradigma.education/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <img src={logo} alt="logo" width="40" height="40" />
+      </a>
     </header>
   );
 }

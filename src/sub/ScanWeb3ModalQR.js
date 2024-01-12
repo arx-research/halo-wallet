@@ -15,7 +15,7 @@ function ScanWeb3ModalQR({ onScan, onError, onCancel }) {
   }
 
   return (
-    <div>
+    <div className={"page-content"}>
       <div style={{ marginTop: "20px", marginBottom: "10px" }}>
         <p className={"label-text"}>Cole a url aqui:</p>
       </div>
