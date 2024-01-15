@@ -1,6 +1,6 @@
 import React from "react";
 
-import logo from "../assets/logo.png";
+import logo from "../assets/logo.svg";
 
 export default function Header() {
   return (
@@ -10,7 +10,7 @@ export default function Header() {
         target="_blank"
         rel="noopener noreferrer"
       >
-        <img src={logo} alt="logo" width="40" height="40" />
+        <img src={logo} alt="logo" width="30" height="30" />
       </a>
     </header>
   );
