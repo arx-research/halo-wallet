@@ -134,7 +134,7 @@ function SessionRequest({ haloAddress, sessionRequest, onRequestProcessed }) {
   }
 
   return (
-    <div>
+    <div className={"page-content"}>
       <p className={"label-text"}>
         Request from the dApp:
         <br />
@@ -156,12 +156,24 @@ function SessionRequest({ haloAddress, sessionRequest, onRequestProcessed }) {
       >
         {vizComponent}
       </div>
-      <p className={"label-text"} style={{ margin: "20px 0" }}>
+      <p className={"label-text"} style={{ marginTop: "20px" }}>
         You will need to scan your HaLo after clicking the "Sign request"
         button.
       </p>
-      <Button onClick={() => btnSignTransaction()}>Sign request</Button>
-      <Button onClick={() => btnReject()}>Deny</Button>
+      <div className={"button-container"}>
+        <Button 
+          className={"btn-pad"}
+          onClick={() => btnSignTransaction()}
+        >
+          Sign request
+        </Button>
+        <Button 
+          className={"btn-pad btn-pad-red"}
+          onClick={() => btnReject()}
+        >
+          Deny
+        </Button>
+      </div>
     </div>
   );
 }

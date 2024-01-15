@@ -8,6 +8,10 @@ import {
   EIP155_TEST_CHAINS,
 } from "../logic/EIP155Chains";
 
+import arrowGreen from "../assets/icon-arrow-green.png";
+import logo from "../assets/logo.svg";
+import iconBook from "../assets/icon-livro-1.png";
+
 function SessionProposal({
   proposal,
   haloAddress,
@@ -78,23 +82,40 @@ function SessionProposal({
   }
 
   return (
-    <div>
-      <p className={"label-text"}>
+    <div  className={"page-content"}>
+      <div className={"display-flex-icon"}>
+        <img src={logo} alt="icon" style={{width: "45px"}} />
+        <img src={arrowGreen} alt="icon" style={{width: "40px"}} />
+        <img src={iconBook} alt="icon" style={{width: "60px"}} />
+      </div>
+      <p className={"label-text text-center"}>
         The following dApp wants to pair with this wallet:
       </p>
-      <p className={"label-text-white"} style={{ marginTop: 20 }}>
-        dApp name: {proposal.params.proposer.metadata.name}
-        <br />
-        Description: {proposal.params.proposer.metadata.description}
-        <br />
-        dApp URL: {proposal.params.proposer.metadata.url}
-      </p>
-      <p className={"label-text"} style={{ marginTop: 20 }}>
-        You will need to scan your HaLo after approving the request.
-      </p>
-      <div style={{ marginTop: 20 }}>
-        <Button onClick={() => btnScanPublicKey()}>Approve request</Button>
-        <Button onClick={() => btnDenyRequest()}>Deny</Button>
+      <div className={"card-container"}>
+        <p className={"label-text-white"}>
+          dApp name: {proposal.params.proposer.metadata.name}
+          <br />
+          Description: {proposal.params.proposer.metadata.description}
+          <br />
+          dApp URL: {proposal.params.proposer.metadata.url}
+        </p>
+        <p className={"label-text"} style={{ marginTop: 20 }}>
+          You will need to scan your HaLo after approving the request.
+        </p>
+        <div className={"button-container"}>
+          <Button 
+            className={"btn-pad"}
+            onClick={() => btnScanPublicKey()}
+          >
+            Approve request
+          </Button>
+          <Button 
+            className={"btn-pad btn-pad-red"}
+            onClick={() => btnDenyRequest()}
+          >
+            Deny
+          </Button>
+        </div>
       </div>
     </div>
   );
