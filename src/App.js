@@ -128,7 +128,7 @@ function App() {
           <img className={"loading-icon"} src={loadingIcon} alt="loading"/>
           {/* <p>Initializing...</p> */}
         </div>);
-      case "piring":
+      case "pairing":
         return (
           <ScanWeb3ModalQR
             onScan={(pairURI) => setAppState({ name: "do_pair", pairURI })}
