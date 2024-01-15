@@ -3,8 +3,8 @@
   "name": "HaLo Wallet",
   "icons": [
     {
-      "src": "favicon.png",
-      "sizes": "64x64",
+      "src": "favicon-32x32.png",
+      "sizes": "32x32",
       "type": "image/x-icon"
     }
   ],
