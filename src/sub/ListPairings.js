@@ -111,7 +111,7 @@ function ListPairings({
   }
 
   return (
-    <div>
+    <div className={"page-content"}>
       <div style={{ marginBottom: "40px" }}>
         <p className={"label-text"}>Active HaLo tag:</p>
         <p
