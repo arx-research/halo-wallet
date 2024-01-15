@@ -22,9 +22,57 @@
   text-transform: uppercase;
 }
 
+
+.btn-pad-red {
+  background-color: #f8d7db;
+  color: #842029;
+}
+
+.lds-grid {
+  position: absolute;
+  /* width: 64px;
+  height: 64px; */
+  width: 50px;
+  height: 50px;
+  top: 50%;
+  left: 50%;
+  /* margin-top: -20px; */
+  margin: -25px 0 0 -25px;
+}
+
+.lds-grid-text {
+  margin: 0 auto;
+}
+
+.loading-icon {
+  width: 40px;
+  height: 40px;
+}
+
 .page-content {
   padding: 0 16px;
   max-width: 500px; 
   margin: 0 auto; 
   width: 100%
+}
+
+.display-flex-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.button-container {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 10px;
+}
+
+.card-container {
+  padding: 20px;
+  margin: 10px 0;
+  border: 2px solid #27293d;
+  border-radius: 6px;
 }
