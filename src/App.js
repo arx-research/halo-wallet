@@ -15,6 +15,8 @@ import Header from "./sub/Header.tsx";
 import Wrapper from "./sub/Wrapper.tsx";
 import ListPairings from "./sub/ListPairings";
 
+import loadingIcon from "./assets/loading.gif";
+
 function App() {
   let [appState, setAppState] = useState({ name: "init" });
   let [haloAddress, setHaloAddress] = useState(null);
@@ -121,8 +123,12 @@ function App() {
   function getMainComponent() {
     switch (appState.name) {
       case "init":
-        return <p>Initializing...</p>;
-      case "pairing":
+        return (
+        <div className={"lds-grid"}>
+          <img className={"loading-icon"} src={loadingIcon} alt="loading"/>
+          {/* <p>Initializing...</p> */}
+        </div>);
+      case "piring":
         return (
           <ScanWeb3ModalQR
             onScan={(pairURI) => setAppState({ name: "do_pair", pairURI })}
@@ -140,7 +146,11 @@ function App() {
           />
         );
       case "do_pair":
-        return <p className={"label-text"}>Pairing...</p>;
+        return (
+        <div className={"lds-grid"}>
+          <img className={"loading-icon"} src={loadingIcon} alt="loading"/>
+          {/* <p className={"label-text"}>Pairing...</p> */}
+        </div>);
       case "session_proposal":
         return (
           <SessionProposal
@@ -164,7 +174,9 @@ function App() {
           />
         );
       default:
-        return <p className={"label-text"}>Unknown app state.</p>;
+        return <div className={"lds-grid-text"}>
+          <p className={"label-text"}>Unknown app state.</p>
+        </div>;
     }
   }
 
